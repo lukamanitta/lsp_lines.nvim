@@ -170,7 +170,7 @@ function M.show(namespace, bufnr, diagnostics, opts, source)
                             table.insert(
                                 left,
                                 {
-                                    vim.opt.fillchars:get().cornerbotleft,
+                                    "┗",
                                     highlight_groups[data.severity],
                                 }
                             )
@@ -194,7 +194,7 @@ function M.show(namespace, bufnr, diagnostics, opts, source)
                 elseif multi > 0 then
                     center_symbol = vim.opt.fillchars:get().horizup
                 else
-                    center_symbol = vim.opt.fillchars:get().cornerbotleft
+                    center_symbol = "┗"
                 end
                 -- local center_text =
                 local center = {
